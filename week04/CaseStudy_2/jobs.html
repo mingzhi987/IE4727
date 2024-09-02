@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaJam Coffee House - Menu</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="cs2_styles.css">
+<style>
+    
+</style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>JavaJam Coffee House</h1>
+        </header>
+        <div id="leftcol">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html"> Menu</a></li>
+                <li><a href="music.html"> Music</a></li>
+                <li><a href="jobs.html"> Jobs</a></li>
+            </ul>
+        </nav>
+        </div>
+        
+<div id="rightcol">
+    <div class="content">
+    <h2>Jobs at JavaJam</h2>
+    Want to work at JavaJam? Fill out the form below to start your application. Required fields are marked with an asterisk *
+    <div>
+            <form method="post" action="show_list.php">
+                <label>*Name: </label> <input name="Name" class="input-field" type="text" placeholder="Enter your name here" size="30px" required="1">
+                <br>
+                <label>*E-mail: </label>  <input name="Email" type="email" placeholder="Enter your Email-ID here" size="30px" required="1">
+                <br>
+                <label>Start Date: </label> <input name="Start Date" type="date">
+                <br>
+                <label>*Experience:
+                    <textarea name="Experience" placeholder="Enter your past experience here" id ="experience" rows="4" cols="40" required='1'></textarea>
+                <br>
+
+                <input type = "reset" class="button" value="Clear">
+                <input type = "submit" class="button" value="Apply Now">
+            </form>
+    </div>
+</div>
+</div>
+
+<footer>
+    <small><i>Copyright &copy; 2024 JavaJam Coffee House</i></small>
+    <br><small><a href="mailto:zhiming@lin.com"><i>zhiming@lin.com</i></a></small>
+</footer>
+</body>
+</html>

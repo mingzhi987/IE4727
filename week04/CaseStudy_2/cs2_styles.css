@@ -1,0 +1,49 @@
+/* main */
+h1{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+h2{color:#2d0302; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif}
+header{background-color: #d1b38d;
+    color: #976439; 
+    text-shadow: 3px 3px #000000;
+    font-size: 150%; 
+    padding: 10px 10px 10px 150px;}
+body{background-color: #fef6c2; min-width: 800px; align-items: center;}
+footer{font-size: small; text-align: center; padding: 10px 0px 10px 0px;background-color: #d1b38d; color:#000000}
+div p {padding: 0px 20px;}
+
+/* nav */
+nav ul {list-style-type: none; font-size: larger;}
+nav {display: block;text-align: center;}
+nav a {text-decoration: none; color: #976439; font-weight: bolder;}
+nav li {font-weight: bolder;}
+
+/* table */
+table{border-spacing: 3px;padding: 0px 0px 0px 70px; color: #2d0302; width: 80%;}
+table td{text-align: center;padding: 10px 10px 10px 10px;}
+#tabledesc {text-align: left; align-items: center;}
+#tablehead {text-align:left; font-size: large; padding: 0px;}
+#tableform {width:20em;}
+tr:nth-of-type(odd){background-color: #d1b38d;}
+tr:nth-of-type(even){background-color: #f5f5df;}
+
+/* center */
+#wrapper{background-color: #E2D1b3; 
+    color: #976439;
+    width: 80%;
+    margin: auto;
+    min-width:850px;align-items: center;}
+#leftcol{float: left;
+    width: 100px;}
+#rightcol{margin-left: 150px;
+    background-color: #f5f5df;
+    color: #000000;}
+.content{padding:5px 5px 20px 30px; background-color: #f5f5df;}
+#floatright{margin: -20px auto; float:right;}
+#pointer {list-style-image: url(coffee_pointer_small.png);}
+
+/* form */
+form{font-family:Arial,sans-serif; width:500px; padding:10px; border: 0;}
+label{clear:left; display: block; width:100px; text-align: right; padding-right: 10px; margin-top:10px;}
+input, textarea{margin-top:10px; display:block;}
+
+/* icon src: https://www.flaticon.com/free-icon/coffee-cup_924514*/
+/* img src: https://mustsharenews.com/wp-content/uploads/2023/02/MBS-S4.4-Billion-Expansion-Likely-To-Be-Delayed-Again-Initially-Expected-To-Be-Completed-By-2026.jpg*/
