@@ -1,0 +1,98 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-image: url('hotel.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+* {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page {
+  max-width: 500px;
+  margin-left: 0px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+form {
+  width: 400px;
+  margin-left: 0px;
+}
+h2 {
+  color: #090979;
+}
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  margin: 16px 0px;
+}
+
+input.errors {
+  border-color: red;
+}
+
+p {
+  white-space: pre-line;
+  margin-top: 0px;
+  color: red;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+button.enabled {
+  background: black;
+  color: #ffffff;
+}
+
+button.disabled {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+em{
+  color: red;
+}
+
+.content {
+  margin-left: 20px;
+}
+
+.notebox{
+  background-color: #e1dddd;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+/* img src: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fhotel-background&psig=AOvVaw33y_LkZ6a9t2Te6tMLAsRI&ust=1726159564800000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNjj196su4gDFQAAAAAdAAAAABAU */
