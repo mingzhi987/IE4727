@@ -5,6 +5,8 @@ function RegisterValidation() {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
+    birthday: "",
+    phonenumber: "",
     password: "",
     confirmPassword: "",
   });
@@ -16,6 +18,8 @@ function RegisterValidation() {
   const [formStatus, setFormStatus] = useState({
     usernameValid: false,
     emailValid: false,
+    birthdayValid: false,
+    phonenumberValid: false,
     passwordsMatch: false,
     passwordValid: false,
     isSubmitButtonEnabled: false,
@@ -26,6 +30,7 @@ function RegisterValidation() {
 
     return requirements;
   };
+
   // Validate password
   const checkPassword = (password) => {
     const requirements = [];
@@ -39,20 +44,29 @@ function RegisterValidation() {
 
     return requirements;
   };
+  //Validate phone number
+  const checkPhonenumber = (phonenumber) => {
+    const requirements = [];
+
+    if (phonenumber.length === 8) requirements.push("8 numbers");
+    if (/[a-z]/.test(password)) requirements.push("no letters");
+    if (/[A-Z]/.test(password)) requirements.push("no letters");
+    if (/[!@#$%^&*(),.?":{}|<>]/.test(password))
+      requirements.push("no special character");
+    if (!/[0-9]/.test(password)) requirements.push("at least 1 number");
+
+    return requirements;
+  };
+
   // Validation logic moved to a separate function
   const validateForm = (updatedData) => {
-    // Check if username has at least 3 characters
-    const usernameValid = updatedData.username.length >= 5;
-    // Check if email has .com
-    const emailValid = /\S+@\S+\.\S+/.test(updatedData.email);
-    // Check if birthday is valid
+    const usernameValid = updatedData.username.length >= 10;
+    const emailValid = /@(?=[\w]).*\.(?=[\w])/.test(updatedData.email);
     const birthdayValid = new Date(updatedData.birthday) <= new Date();
-    // Check if passwords match after state update
+    const phonenumberValid = updatedData.phonenumber.length === 8;
     const passwordsMatch = updatedData.password === updatedData.confirmPassword;
-    // Check password validity and get missing requirements
     const passwordRequirements = checkPassword(updatedData.password);
     const passwordValid = passwordRequirements.length === 0;
-    // Check if all fields are filled after state update
     const allFieldsFilled = Object.values(updatedData).every((value) =>
       Boolean(value.trim())
     );
@@ -60,7 +74,7 @@ function RegisterValidation() {
     setErrors((prevErrors) => ({
       ...prevErrors,
       username: updatedData.username ? !usernameValid
-        ? "Username must be at least 3 characters. Please try again." 
+        ? "Username must be at least 10 characters. Please try again." 
         : null : "Please enter a username.",
       email: updatedData.email
         ? !emailValid
@@ -69,6 +83,9 @@ function RegisterValidation() {
       birthday: updatedData.birthday
         ? !birthdayValid ? "Please enter a valid birthday." 
         : null: "Please enter a birthday.",
+      phonenumber: updatedData.phonenumber
+        ? !phonenumberValid ? "Please enter a valid phone number."
+        : null: "Please enter a phone number.",
       password: updatedData.password
         ? !passwordValid
           ? `Password must include ${passwordRequirements.join(", ")}`
@@ -80,6 +97,7 @@ function RegisterValidation() {
       usernameValid,
       emailValid,
       birthdayValid,
+      phonenumberValid,
       passwordsMatch,
       passwordValid,
       isSubmitButtonEnabled:
@@ -128,6 +146,7 @@ function RegisterValidation() {
       username: "",
       email: "",
       birthday: "",
+      phonenumber: "",
       password: "",
       confirmPassword: "",
     });
@@ -135,6 +154,7 @@ function RegisterValidation() {
       usernameValid: false,
       emailValid: false,
       birthdayValid: false,
+      phonenumberValid: false,
       passwordsMatch: false,
       passwordValid: false,
       isSubmitButtonEnabled: false,
@@ -202,11 +222,22 @@ function RegisterValidation() {
           required={true}
         />
         {errors.birthday && <p>{errors.birthday}</p>}
+        <label>Phone Number<em>*</em></label>
+        <input
+          name="phonenumber"
+          type="tel"
+          placeholder="89237293"
+          className={errors.phonenumber ? "errors" : null}
+          value={formData.phonenumber}
+          onChange={handleChange}
+          required={true}
+        />
+        {errors.phonenumber && <p>{errors.phonenumber}</p>}
         <label>Password<em>*</em></label>
         <input
           name="password"
           type="password"
-          placeholder="Enter a strong password"
+          placeholder="**********"
           className={errors.password ? "errors" : null}
           value={formData.password}
           onChange={handleChange}
@@ -217,7 +248,7 @@ function RegisterValidation() {
         <input
           name="confirmPassword"
           type="password" id="myPassword"
-          placeholder="Confirm your password"
+          placeholder="**********"
           className={errors.confirmPassword ? "errors" : null}
           value={formData.confirmPassword}
           onChange={handleChange}

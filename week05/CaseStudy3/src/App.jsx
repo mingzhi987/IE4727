@@ -27,7 +27,7 @@ function App() {
         <>
         <LogInValidation />
         <span>
-          New member? <a onClick={togglePage}>Register</a>
+          Don't have an account? <a onClick={togglePage}>Register</a>
         </span>
       </>
       )}

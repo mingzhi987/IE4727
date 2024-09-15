@@ -29,20 +29,30 @@
     <h2>Jobs at JavaJam</h2>
     Want to work at JavaJam? Fill out the form below to start your application. Required fields are marked with an asterisk *
     <div>
-            <form method="post" action="show_list.php">
-                <label>*Name: </label> <input name="Name" class="input-field" type="text" placeholder="Enter your name here" size="30px" required="1">
-                <br>
-                <label>*E-mail: </label>  <input name="Email" type="email" placeholder="Enter your Email-ID here" size="30px" required="1">
-                <br>
-                <label>Start Date: </label> <input name="Start Date" type="date">
-                <br>
-                <label>*Experience:
-                    <textarea name="Experience" placeholder="Enter your past experience here" id ="experience" rows="4" cols="40" required='1'></textarea>
-                <br>
-
-                <input type = "reset" class="button" value="Clear">
+        <form method="post" action="show_list.php"></form>
+        <table id="tableuni">
+            <tr>
+                <td><label>*Name: </label></td>
+                <td><input name="Name" type="text" placeholder="Enter your Name here" size="30px" required="1"></td>
+            </tr>
+            <tr>
+                <td><label>*E-mail: </label></td>
+                <td><input name="Email" type="email" placeholder="Enter your Email-ID here" size="30px" required="1"></td>
+            </tr>
+            <tr>
+                <td><label>Start Date: </label></td>
+                <td><input name="Start Date" type="date"></td>
+            </tr>
+            <tr>
+                <td><label>*Experience:</label></td>
+                <td><textarea name="Experience" placeholder="Enter your past experience here" id ="experience" rows="4" cols="40" required='1'></textarea></td>    
+            </tr>
+            <tr>
+                <td><input type = "reset" class="button" value="Clear">
                 <input type = "submit" class="button" value="Apply Now">
+            </tr>
             </form>
+        </table>
     </div>
 </div>
 </div>

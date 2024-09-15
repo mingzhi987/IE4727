@@ -24,6 +24,8 @@ table td{text-align: center;padding: 10px 10px 10px 10px;}
 #tableform {width:20em;}
 tr:nth-of-type(odd){background-color: #d1b38d;}
 tr:nth-of-type(even){background-color: #f5f5df;}
+#tableuni tr:nth-of-type(odd){background-color: #f5f5df;}
+#tableuni {text-align:left; font-size: large; padding: 0px;}
 
 /* center */
 #wrapper{background-color: #E2D1b3; 
